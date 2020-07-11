@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class PagamentoTest {
     Boleto boleto = new Boleto(100.00);
     Fatura fatura = new Fatura(500.00, "HAYLEY KIYOKO");
-    Pagamento pagamento = new Pagamento(100.00, "BOLETO", boleto);
+    Pagamento pagamento = new Pagamento(100.00, "BOLETO");
 
     @Test
     void testGetValorPago() {
@@ -33,17 +33,5 @@ class PagamentoTest {
     void testSetTipo() {
         pagamento.setTipo("CARTAO");
         assertEquals("CARTAO", pagamento.getTipo());
-    }
-
-    @Test
-    void testGetBoleto() {
-        assertEquals(boleto, pagamento.getBoleto());
-    }
-
-    @Test
-    void testSetBoleto() {
-        Boleto boleto2 = new Boleto(60.00);
-        pagamento.setBoleto(boleto2);
-        assertEquals(boleto2, pagamento.getBoleto());
     }
 }

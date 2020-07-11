@@ -9,18 +9,17 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 
 class FaturaTest {
-    Boleto boleto = new Boleto(50.00);
-    Fatura fatura = new Fatura(100.00, "ADELE");
-    Pagamento pagamento = new Pagamento(50.00, "BOLETO", boleto);
+    Pagamento pagamento = new Pagamento(50.00, "BOLETO");
+    Fatura fatura = new Fatura(1000.00, "ADELE");
 
     @BeforeEach
     void setUp() {
-        fatura.setPagamento(pagamento);
+        fatura.setPagamentos(pagamento);
     }
 
     @Test
     void testGetValorTotal() {
-        assertEquals(100.00, fatura.getValorTotal());
+        assertEquals(1000.00, fatura.getValorTotal());
     }
 
     @Test
@@ -57,28 +56,13 @@ class FaturaTest {
     }
 
     @Test
-    void testSetPagamentos () {
-        Boleto boleto2 = new Boleto(100.00);
-        Boleto boleto3 = new Boleto(50.00);
-
-        Pagamento pagamento2 = new Pagamento(100.00, "BOLETO", boleto2);
-        Pagamento pagamento3 = new Pagamento(100.00, "BOLETO", boleto3);
-
-        List<Pagamento> pagamentos = new ArrayList<Pagamento>();
-        pagamentos.add(pagamento2);
-        pagamentos.add(pagamento3);
-
-        fatura.setPagamentos(pagamentos);
+    void testSetPagamentos() {
+        Pagamento pagamento2 = new Pagamento(50.00, "BOLETO");
+        Pagamento pagamento3 = new Pagamento(50.00, "BOLETO");
+        fatura.setPagamentos(pagamento2);
+        fatura.setPagamentos(pagamento3);
 
         assertEquals(3, fatura.getPagamentos().size());
-
-    }
-    @Test
-    void testSetPagamento() {
-        Boleto boleto2 = new Boleto(100.00);
-        Pagamento pagamento2 = new Pagamento(100.00, "BOLETO", boleto);
-        fatura.setPagamento(pagamento2);
-        assertEquals(2, fatura.getPagamentos().size());
     }
 
 }

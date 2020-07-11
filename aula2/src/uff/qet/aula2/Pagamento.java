@@ -5,12 +5,10 @@ import uff.qet.common.classes.ClassModel;
 public class Pagamento extends ClassModel {
     private double valorPago;
     private String tipo;
-    private Boleto boleto;
 
-    public Pagamento(double valorPago, String tipo, Boleto boleto) {
+    public Pagamento(double valorPago, String tipo) {
         this.valorPago = valorPago;
         this.tipo = tipo;
-        this.boleto = boleto;
     }
 
     public double getValorPago() {
@@ -29,11 +27,4 @@ public class Pagamento extends ClassModel {
         this.tipo = tipo;
     }
 
-    public Boleto getBoleto() {
-        return boleto;
-    }
-
-    public void setBoleto(Boleto boleto) {
-        this.boleto = boleto;
-    }
 }

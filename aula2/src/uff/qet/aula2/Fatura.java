@@ -51,11 +51,7 @@ public class Fatura extends ClassModel {
         return pagamentos;
     }
 
-    public void setPagamentos(List<Pagamento> pagamentos) {
-        this.pagamentos.addAll(pagamentos);
-    }
-
-    public void setPagamento(Pagamento pagamento) {
+    public void setPagamentos(Pagamento pagamento) {
         this.pagamentos.add(pagamento);
     }
 }
