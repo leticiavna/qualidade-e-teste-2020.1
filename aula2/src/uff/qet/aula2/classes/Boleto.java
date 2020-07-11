@@ -1,4 +1,7 @@
 package uff.qet.aula2.classes;
 
-public class Boleto {
+import uff.qet.common.classes.ClassModel;
+
+public class Boleto extends ClassModel {
+
 }
