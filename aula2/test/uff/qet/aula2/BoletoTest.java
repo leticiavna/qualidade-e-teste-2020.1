@@ -1,4 +1,4 @@
-package uff.qet.aula2.classes;
+package uff.qet.aula2;
 
 import org.junit.jupiter.api.Test;
 
@@ -8,12 +8,12 @@ class BoletoTest {
     Boleto boleto = new Boleto(50.03);
 
     @Test
-    void getValorPago() {
+    void testGetValorPago() {
         assertEquals(50.03, boleto.getValorPago());
     }
 
     @Test
-    void setValorPago() {
+    void testSetValorPago() {
         boleto.setValorPago(49.97);
         assertEquals(49.97, boleto.getValorPago());
     }

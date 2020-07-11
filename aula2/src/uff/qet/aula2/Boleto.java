@@ -1,4 +1,4 @@
-package uff.qet.aula2.classes;
+package uff.qet.aula2;
 
 import uff.qet.common.classes.ClassModel;
 
