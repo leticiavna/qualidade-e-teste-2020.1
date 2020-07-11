@@ -1,4 +1,4 @@
-package com.uff.qet;
+package uff.qet.aula1;
 
 public class Factorial {
     /**

@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/aula1/aula1.iml" filepath="$PROJECT_DIR$/aula1/aula1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/aula2/aula2.iml" filepath="$PROJECT_DIR$/aula2/aula2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/common/common.iml" filepath="$PROJECT_DIR$/common/common.iml" />
       <module fileurl="file://$PROJECT_DIR$/qualidade-e-teste-2020.1.iml" filepath="$PROJECT_DIR$/qualidade-e-teste-2020.1.iml" />
     </modules>
   </component>
