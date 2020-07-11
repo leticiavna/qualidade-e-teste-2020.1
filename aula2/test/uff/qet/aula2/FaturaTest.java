@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class FaturaTest {
     Boleto boleto = new Boleto(50.00);
     Fatura fatura = new Fatura(100.00, "ADELE");
-    Pagamento pagamento = new Pagamento(50.00, "BOLETO", fatura, boleto);
+    Pagamento pagamento = new Pagamento(50.00, "BOLETO", boleto);
 
     @BeforeEach
     void setUp() {
@@ -47,7 +47,7 @@ class FaturaTest {
 
     @Test
     void testSetFaturaPaga() {
-        fatura.setFaturaPaga(true);
+        fatura.setFaturaPaga();
         assertEquals(true, fatura.isFaturaPaga());
     }
 
@@ -61,8 +61,8 @@ class FaturaTest {
         Boleto boleto2 = new Boleto(100.00);
         Boleto boleto3 = new Boleto(50.00);
 
-        Pagamento pagamento2 = new Pagamento(100.00, "BOLETO", fatura, boleto2);
-        Pagamento pagamento3 = new Pagamento(100.00, "BOLETO", fatura, boleto3);
+        Pagamento pagamento2 = new Pagamento(100.00, "BOLETO", boleto2);
+        Pagamento pagamento3 = new Pagamento(100.00, "BOLETO", boleto3);
 
         List<Pagamento> pagamentos = new ArrayList<Pagamento>();
         pagamentos.add(pagamento2);
@@ -76,7 +76,7 @@ class FaturaTest {
     @Test
     void testSetPagamento() {
         Boleto boleto2 = new Boleto(100.00);
-        Pagamento pagamento2 = new Pagamento(100.00, "BOLETO", fatura, boleto);
+        Pagamento pagamento2 = new Pagamento(100.00, "BOLETO", boleto);
         fatura.setPagamento(pagamento2);
         assertEquals(2, fatura.getPagamentos().size());
     }

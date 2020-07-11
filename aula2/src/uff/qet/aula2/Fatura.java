@@ -1,8 +1,7 @@
 package uff.qet.aula2;
 
 import uff.qet.common.classes.ClassModel;
-
-import java.awt.print.Pageable;
+;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -44,8 +43,8 @@ public class Fatura extends ClassModel {
         return faturaPaga;
     }
 
-    public void setFaturaPaga(boolean faturaPaga) {
-        this.faturaPaga = faturaPaga;
+    public void setFaturaPaga() {
+        this.faturaPaga = true;
     }
 
     public List<Pagamento> getPagamentos() {
