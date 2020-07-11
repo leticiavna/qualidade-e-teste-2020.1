@@ -15,7 +15,7 @@ class ProcessadorBoletosTest {
         Boleto boleto3 = new Boleto(250.00);
 
         Boleto[] boletos = { boleto1, boleto2, boleto3 };
-        ProcessadorBoletos.processar(boletos, fatura);
+        ProcessadorBoletos.processarLista(boletos, fatura);
 
         assertEquals(true, fatura.isFaturaPaga());
     }
@@ -27,7 +27,7 @@ class ProcessadorBoletosTest {
         Boleto boleto3 = new Boleto(250.00);
 
         Boleto[] boletos = { boleto1, boleto2, boleto3 };
-        ProcessadorBoletos.processar(boletos, fatura);
+        ProcessadorBoletos.processarLista(boletos, fatura);
 
         assertEquals(true, fatura.isFaturaPaga());
     }
