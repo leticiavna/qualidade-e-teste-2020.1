@@ -54,12 +54,12 @@ class ProcessadorBoletosTest {
 
     @Test
     void testNaoHaBoletoThrowError() {
-        assertThrows(IllegalArgumentException.class, ()-> ProcessadorBoletos.processar({}, fatura));
+        assertThrows(IllegalArgumentException.class, ()-> ProcessadorBoletos.processar(null, fatura));
     }
 
     @Test
     void testNaoHaFaturaThrowError() {
         Boleto boleto = new Boleto(200.00);
-        assertThrows(IllegalArgumentException.class, ()-> ProcessadorBoletos.processar(boleto, {}));
+        assertThrows(IllegalArgumentException.class, ()-> ProcessadorBoletos.processar(boleto, null));
     }
 }
